@@ -33,7 +33,13 @@
         <?php } ?>
       </div>
     <?php }?>
-    <div class="entry-content"><p><?php the_content();?></p></div>
+    
+    <div class="entry-content"><h6>Scientific Name</h6><p><?php echo get_field('scientific_name');?></p></div>
+    <div class="entry-content"><h6>Diet</h6><p><?php echo get_field('diet');?></p></div>
+    <div class="entry-content"><h6>Weight</h6><p><?php echo get_field('weight');?></p></div>
+    <div class="entry-content"><h6>Height</h6><p><?php echo get_field('height');?></p></div>
+    <div class="entry-content"><h6>Life Span</h6><p><?php echo get_field('life_span');?></p></div>
+    <div class="entry-content"><h6>Description</h6><p><?php the_content();?></p></div>
     <?php if( get_theme_mod( 'advance_pet_care_tags_hide',true) != '') { ?>
       <div class="tags my-3 mx-0"><p><?php
       if( $tags = get_the_tags() ) {

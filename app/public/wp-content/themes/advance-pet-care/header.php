@@ -21,7 +21,7 @@
   } else {
     do_action( 'wp_body_open' );
   } ?>
-  <header role="banner" style="position: sticky; top: 0; z-index:100;">
+  
     <?php if(get_theme_mod('advance_pet_care_preloader_option',true) != '' || get_theme_mod('advance_pet_care_responsive_preloader', true) != ''){ ?>
       <div id="loader-wrapper">
         <div id="loader"></div>
@@ -30,46 +30,13 @@
       </div>
     <?php }?>
     <a class="screen-reader-text skip-link" href="#maincontent"><?php esc_html_e( 'Skip to content', 'advance-pet-care' ); ?></a>
-    <div id="header">
+   
     
-        <div class="top-header pt-2 pb-4">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-4">
-                <div class="mail">
-                  
-                    <a href="mailto:<?php echo esc_attr( get_theme_mod('advance_pet_care_mail1','') ); ?>"><i class="fas fa-envelope mr-2"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?><span class="screen-reader-text"><i class="fas fa-envelope"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?></span></a>
-                  
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <div class="phone text-center">
-                  
-                    <a href="tel:<?php echo esc_attr( get_theme_mod('advance_pet_care_phone1','' )); ?>"><i class="fas fa-phone mr-2"></i><?php echo esc_html( get_theme_mod('advance_pet_care_phone1','' )); ?><span class="screen-reader-text"><i class="fas fa-phone"></i><?php echo esc_html( get_theme_mod('advance_pet_care_phone1','' )); ?></span></a>
-                  
-                </div>       
-              </div>
-              <div class="col-lg-4 col-md-4">
-                <div class="social-icons text-right">
-                  
-                    <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_facebook_url','' ) ); ?>"><i class="fab fa-facebook-f ml-3" aria-hidden="true"></i><span class="screen-reader-text"><?php esc_html_e( 'Facebook','advance-pet-care' );?></span></a>
-                    
-                    
-                    <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_twitter_url','' ) ); ?>"><i class="fab fa-twitter ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Twitter','advance-pet-care' );?></span></a>
-                    
-                    <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_youtube_url','' ) ); ?>"><i class="fab fa-youtube ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Youtube','advance-pet-care' );?></span></a>
-                    
-                    
-                    <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_insta_url','' ) ); ?>"><i class="fab fa-instagram ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Instagram','advance-pet-care' );?></span></a>
-                                 
-                </div>  
-              </div>
-            </div>
-          </div>
-        </div>
-     
-      <div class="main-menu <?php if( get_theme_mod( 'advance_pet_care_sticky_header', false) != '' || get_theme_mod( 'advance_pet_care_responsive_sticky_header', false) != '') { ?> sticky-header"<?php } else { ?>close-sticky <?php } ?>" >
-        <div class="container" style="position: sticky;">
+ 
+  <header role="banner" >
+  <div id="header" style="position: sticky; top: 0; z-index:100;">
+      <div class="main-menu  <?php if( get_theme_mod( 'advance_pet_care_sticky_header', false) != '' || get_theme_mod( 'advance_pet_care_responsive_sticky_header', false) != '') { ?> sticky-header"<?php } else { ?>close-sticky <?php } ?>" >
+        <div class="container">
         <div class="row">
             <div class="col-lg-10 col-md-7 col-4">
               <?php 
@@ -141,9 +108,9 @@
           </div>
         </div>
       </div>
-
+      </div>
+      </header>
      
       
-    </div>
-  </header>
+    
   

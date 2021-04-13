@@ -433,3 +433,56 @@ require get_template_directory().'/inc/customizer.php';
 
 /* Admin about theme */
 require get_template_directory() . '/inc/admin/admin.php';
+
+add_image_size('pageBanner',1000, 350, true);
+
+function pageBanner(){
+	?>
+<div class="" style="background-size: 100% 100%; height:<?php if(is_home()){echo '550px';}else{echo '400px';}?>; background-image: url(
+	<?php if(is_archive()){ echo get_theme_file_uri('/images/'.str_replace(' ','_', post_type_archive_title('', false)).'.jpg');}
+	else {
+		if(is_home()){
+			echo get_theme_file_uri('/images/elephants.jpg');
+		}
+		else{
+		$pageBannerImage = get_field('banner_image');
+		echo $pageBannerImage['sizes']['pageBanner'];
+	}
+	} ?> );border-bottom-color: white;border-bottom-size:10px; border-bottom-style:solid;">
+  <div class="top-header pt-2 pb-4" >
+	<div class="container" >
+	  <div class="row">
+		<div class="col-lg-4 col-md-4">
+		  <div class="mail">
+			
+			  <a href="mailto:<?php echo esc_attr( get_theme_mod('advance_pet_care_mail1','') ); ?>"><i class="fas fa-envelope mr-2"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?><span class="screen-reader-text"><i class="fas fa-envelope"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?></span></a>
+			
+		  </div>
+		</div>
+		<div class="col-lg-4 col-md-4">
+		  <div class="phone text-center">
+			
+			  <a href="tel:<?php echo esc_attr( get_theme_mod('advance_pet_care_phone1','' )); ?>"><i class="fas fa-phone mr-2"></i><?php echo esc_html( get_theme_mod('advance_pet_care_phone1','' )); ?><span class="screen-reader-text"><i class="fas fa-phone"></i><?php echo esc_html( get_theme_mod('advance_pet_care_phone1','' )); ?></span></a>
+			
+		  </div>       
+		</div>
+		<div class="col-lg-4 col-md-4">
+		  <div class="social-icons text-right">
+			
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_facebook_url','' ) ); ?>"><i class="fab fa-facebook-f ml-3" aria-hidden="true"></i><span class="screen-reader-text"><?php esc_html_e( 'Facebook','advance-pet-care' );?></span></a>
+			  
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_twitter_url','' ) ); ?>"><i class="fab fa-twitter ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Twitter','advance-pet-care' );?></span></a>
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_youtube_url','' ) ); ?>"><i class="fab fa-youtube ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Youtube','advance-pet-care' );?></span></a>
+			  
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_insta_url','' ) ); ?>"><i class="fab fa-instagram ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Instagram','advance-pet-care' );?></span></a>
+						   
+		  </div>  
+		</div>
+	  </div>
+	</div> 
+  </div>
+  </div>
+  <?php }
