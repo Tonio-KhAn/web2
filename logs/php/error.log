@@ -57,3 +57,26 @@
 [20-Mar-2021 19:10:19 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
 [20-Mar-2021 19:10:21 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
 [20-Mar-2021 19:49:58 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\header.php on line 29
+[12-Apr-2021 23:06:41 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting end of file in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 23
+[12-Apr-2021 23:19:34 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 48
+[12-Apr-2021 23:20:13 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 60
+[12-Apr-2021 23:23:45 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 58
+[12-Apr-2021 23:54:39 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 13
+[13-Apr-2021 01:03:07 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 16
+[13-Apr-2021 01:03:07 UTC] PHP Stack trace:
+[13-Apr-2021 01:03:07 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:0
+[13-Apr-2021 01:03:07 UTC] PHP   2. require() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:17
+[13-Apr-2021 01:03:07 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-blog-header.php:19
+[13-Apr-2021 01:03:07 UTC] PHP   4. include() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\template-loader.php:106
+[13-Apr-2021 01:04:25 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 14
+[13-Apr-2021 01:04:25 UTC] PHP Stack trace:
+[13-Apr-2021 01:04:25 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:0
+[13-Apr-2021 01:04:25 UTC] PHP   2. require() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:17
+[13-Apr-2021 01:04:25 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-blog-header.php:19
+[13-Apr-2021 01:04:25 UTC] PHP   4. include() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\template-loader.php:106
+[13-Apr-2021 01:06:36 UTC] PHP Warning:  A non-numeric value encountered in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\single-animal-information.php on line 15
+[13-Apr-2021 01:06:36 UTC] PHP Stack trace:
+[13-Apr-2021 01:06:36 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:0
+[13-Apr-2021 01:06:36 UTC] PHP   2. require() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:17
+[13-Apr-2021 01:06:36 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-blog-header.php:19
+[13-Apr-2021 01:06:36 UTC] PHP   4. include() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\template-loader.php:106

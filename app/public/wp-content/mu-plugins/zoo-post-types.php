@@ -29,7 +29,7 @@
                 'singular_name' => 'Location'
             ),
             'menu_icon' => 'dashicons-admin-site',
-            'rewrite'=> array('slug' => 'locations'),
+            'rewrite'=> array('slug' => 'information/locations'),
             'has_archive' => true,
             'supports' => array('title', 'editor','excerpt', 'custom-fields')
         ));
