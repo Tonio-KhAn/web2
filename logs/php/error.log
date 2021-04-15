@@ -80,3 +80,31 @@
 [13-Apr-2021 01:06:36 UTC] PHP   2. require() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:17
 [13-Apr-2021 01:06:36 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-blog-header.php:19
 [13-Apr-2021 01:06:36 UTC] PHP   4. include() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\template-loader.php:106
+[13-Apr-2021 06:17:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/archive-event.php:54
+Stack trace:
+#0 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-blog-header.php(19): require_once('/Users/orrinjos...')
+#2 /Users/orrinjoseph/Local Sites/info3602-project/app/public/index.php(17): require('/Users/orrinjos...')
+#3 {main}
+  thrown in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/archive-event.php on line 54
+[13-Apr-2021 06:53:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php:72
+Stack trace:
+#0 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-blog-header.php(19): require_once('/Users/orrinjos...')
+#2 /Users/orrinjoseph/Local Sites/info3602-project/app/public/index.php(17): require('/Users/orrinjos...')
+#3 {main}
+  thrown in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php on line 72
+[13-Apr-2021 06:53:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php:72
+Stack trace:
+#0 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-blog-header.php(19): require_once('/Users/orrinjos...')
+#2 /Users/orrinjoseph/Local Sites/info3602-project/app/public/index.php(17): require('/Users/orrinjos...')
+#3 {main}
+  thrown in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php on line 72
+[13-Apr-2021 06:54:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function the_post() on null in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php:73
+Stack trace:
+#0 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-blog-header.php(19): require_once('/Users/orrinjos...')
+#2 /Users/orrinjoseph/Local Sites/info3602-project/app/public/index.php(17): require('/Users/orrinjos...')
+#3 {main}
+  thrown in /Users/orrinjoseph/Local Sites/info3602-project/app/public/wp-content/themes/advance-pet-care/index.php on line 73

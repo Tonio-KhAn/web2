@@ -14,7 +14,8 @@
             'menu_icon' => 'dashicons-calendar',
             'rewrite'=> array('slug' => 'events'),
             'has_archive' => true,
-            'supports' => array('title', 'editor','excerpt', 'custom-fields')
+            "taxonomies" => array( 'category' ),
+            'supports' => array('title', 'editor','excerpt', 'custom-fields','thumbnail')
         ));
         
         register_post_type('locations',array(
@@ -31,7 +32,7 @@
             'menu_icon' => 'dashicons-admin-site',
             'rewrite'=> array('slug' => 'information/locations'),
             'has_archive' => true,
-            'supports' => array('title', 'editor','excerpt', 'custom-fields')
+            'supports' => array('title', 'editor','excerpt', 'custom-fields','thumbnail')
         ));
         
         register_post_type('animal-information',array(
@@ -48,7 +49,7 @@
             'menu_icon' => 'dashicons-analytics',
             'rewrite'=> array('slug' => 'information/animal-information'),
             'has_archive' => true,
-            'supports' => array('title', 'editor','excerpt', 'custom-fields')
+            'supports' => array('title', 'editor','excerpt', 'custom-fields','thumbnail')
         ));
         
         register_post_type('animal',array(
@@ -66,7 +67,7 @@
             'menu_icon' => 'dashicons-pets',
             'rewrite'=> array('slug' => 'animals'),
             'has_archive' => true,
-            'supports' => array('title', 'editor','excerpt', 'custom-fields')
+            'supports' => array('title', 'editor','excerpt', 'custom-fields','thumbnail')
         ));
     }
     

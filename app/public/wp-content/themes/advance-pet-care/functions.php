@@ -413,6 +413,7 @@ function advance_pet_care_scripts() {
 	wp_enqueue_script('advance-pet-care-customscripts-jquery', esc_url(get_template_directory_uri()).'/js/custom.js', array('jquery'));
 	wp_enqueue_script('bootstrap-jquery', esc_url(get_template_directory_uri()).'/js/bootstrap.js', array('jquery'));
 	wp_enqueue_script( 'jquery-superfish', esc_url(get_template_directory_uri()) . '/js/jquery.superfish.js', array('jquery') ,'',true);
+	wp_enqueue_script( 'jquery-superfish', esc_url(get_template_directory_uri()) . '/js/jquery.superfish.js', array('jquery') ,'',true);
 	require get_parent_theme_file_path( '/inc/ts-color-pallete.php' );
 	wp_add_inline_style( 'advance-pet-care-basic-style',$advance_pet_care_custom_css );
 
@@ -433,3 +434,74 @@ require get_template_directory().'/inc/customizer.php';
 
 /* Admin about theme */
 require get_template_directory() . '/inc/admin/admin.php';
+
+add_image_size('pageBanner',1000, 350, true);
+add_image_size('themeImage',1000, 1000, true);
+add_image_size('animalImage',200, 200, true);
+add_image_size('thumb',90, 90, true);
+
+function pageBanner(){
+	?>
+<div class="" style="background-size: 100% 100%; height:<?php if(is_home()){echo '550px';}else{echo '400px';}?>; background-image: url(
+	<?php if(is_archive()){ 
+		if (post_type_archive_title('', false) != ''){
+		echo get_theme_file_uri('/images/'.str_replace(' ','_', post_type_archive_title('', false)).'.jpg');
+	} else{
+		echo get_theme_file_uri('/images/Events.jpg');
+	}
+}
+	else {
+		if(is_home()){
+			echo get_theme_file_uri('/images/elephants.jpg');
+		}
+		else{
+		$pageBannerImage = get_field('banner_image');
+		echo $pageBannerImage['sizes']['pageBanner'];
+	}
+	} ?> );border-bottom-color: white;border-bottom-size:10px; border-bottom-style:solid;">
+  <div class="top-header pt-0 pb-4" >
+	<div class="container" >
+	  <div class="row mt-0">
+		<div class="col-lg-4 col-md-4">
+		  <div class="mail">
+			
+			  <a href="mailto:<?php echo esc_attr( get_theme_mod('advance_pet_care_mail1','') ); ?>"><i class="fas fa-envelope mr-2"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?><span class="screen-reader-text"><i class="fas fa-envelope"></i><?php echo esc_html( get_theme_mod('advance_pet_care_mail1','')); ?></span></a>
+			
+		  </div>
+		</div>
+		<div class="col-lg-4 col-md-4 mt-0 pt-0" style="text-align: center;">
+		<?php
+		if(!is_home()){
+			?>
+			<h2 style="text-align:center; display:initial; color:white">Hakuna Matata Zoo</h2>
+<?php
+		}
+  ?>     
+		</div>
+		<div class="col-lg-4 col-md-4">
+		  <div class="social-icons text-right">
+			
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_facebook_url','' ) ); ?>"><i class="fab fa-facebook-f ml-3" aria-hidden="true"></i><span class="screen-reader-text"><?php esc_html_e( 'Facebook','advance-pet-care' );?></span></a>
+			  
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_twitter_url','' ) ); ?>"><i class="fab fa-twitter ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Twitter','advance-pet-care' );?></span></a>
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_youtube_url','' ) ); ?>"><i class="fab fa-youtube ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Youtube','advance-pet-care' );?></span></a>
+			  
+			  
+			  <a href="<?php echo esc_url( get_theme_mod( 'advance_pet_care_insta_url','' ) ); ?>"><i class="fab fa-instagram ml-3"></i><span class="screen-reader-text"><?php esc_html_e( 'Instagram','advance-pet-care' );?></span></a>
+						   
+		  </div>  
+		</div>
+	  </div>
+	</div> 
+  </div>
+  <?php
+  if(is_home()){
+			?>
+			<div style="margin: auto;"><h1 style="text-align:center;">Hakuna Matata Zoo</h1></div>
+<?php
+		}
+  ?>
+		</div>
+  <?php }

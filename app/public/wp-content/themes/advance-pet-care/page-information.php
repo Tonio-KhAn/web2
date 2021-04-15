@@ -10,6 +10,7 @@
  *
  * @package advance-pet-care
  */
+pageBanner();
 get_header(); ?>
 
 <?php do_action('advance_pet_care_page_header'); ?>

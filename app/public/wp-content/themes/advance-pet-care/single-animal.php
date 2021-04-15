@@ -4,49 +4,26 @@
  *
  * @package advance-pet-care
  */
-
+pageBanner();
 get_header(); ?>
+<?php
+$relatedLocation = get_field('locations');
+$theme = get_field('color', $relatedLocation[0]);	
 
-<div class="container">
-    <main role="main" id="maincontent" class="middle-align my-0 mx-auto py-3 px-0">
-    	<?php
-        $advance_pet_care_left_right = get_theme_mod( 'advance_pet_care_single_post_sidebar_layout','Right Sidebar');
-        if($advance_pet_care_left_right == 'Left Sidebar'){ ?>
-            <div class="row">
-		    	<div id="sidebar" class="col-lg-4 col-md-4">
-					<?php dynamic_sidebar('sidebar-1'); ?>
-				</div>
-				<div class="col-lg-8 col-md-8" class="content-ts">
-					<?php
-						/* Start the Loop */
-						while ( have_posts() ) : the_post();
 
-							get_template_part( 'template-parts/content-single' );
+$pageBannerImage = get_field('theme_image', $relatedLocation[0]);
+?>
 
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-
-							the_post_navigation( array(
-								'next_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( 'Next <i class="far fa-long-arrow-alt-right"></i>', 'advance-pet-care' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Next post:', 'advance-pet-care' ) . '</span> ',
-								'prev_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( '<i class="far fa-long-arrow-alt-left"></i> Previous', 'advance-pet-care' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Previous post:', 'advance-pet-care' ) . '</span> ',
-							) );
-
-						endwhile; // End of the loop.
-					?>
-		       	</div>
-		    </div>
-	    <?php }else if($advance_pet_care_left_right == 'Right Sidebar'){ ?>
-	    	<div class="row">
+<div class="" style="background-image: url(<?php echo $pageBannerImage['sizes']['themeImage']; ?>);"  >
+    <main role="main" id="maincontent" class="middle-align my-0 mx-auto py-3 px-0" style="max-width:1000px;">
+            <div class="row" style="border-color:<?php echo $theme ?>;background-color:white; border-size:10px; border-style:solid;">
+            
 		       	<div class="col-lg-8 col-md-8" class="content-ts">
 					<?php
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
 
-							get_template_part( 'template-parts/content-single' );
+							get_template_part( 'template-parts/content-single-animal' );
 
 							// If comments are open or we have at least one comment, load up the comment template.
 							if ( comments_open() || get_comments_number() ) :
@@ -64,61 +41,31 @@ get_header(); ?>
 					?>
 		       	</div>
 				<div id="sidebar" class="col-lg-4 col-md-4">
-					<?php dynamic_sidebar('sidebar-1'); ?>
+        <?php
+                       
+                        if($relatedLocation){
+                        echo '<hr class="section-break">';
+                        echo '<aside role="complementary" aria-label="firstsidebar" id="archives" class="widget p-2 mb-3">';
+                        echo '<h2 class="widget-title text-capitalize text-left p-2">Locations</h2>';
+                        echo '<ul class="m-0">';
+                        foreach($relatedLocation as $location){ //for each a post object
+                            ?>
+
+                    <li><a href="<?php echo get_the_permalink($location);?>">
+                    <?php echo get_the_title($location);?>
+                    </a>
+                    </li>
+                    <?php 
+                    }
+                    echo '</ul>';
+                    echo '</aside>';
+				}
+				
+                    ?>
+
+
 				</div>
 			</div>
-		<?php }else if($advance_pet_care_left_right == 'One Column'){ ?>
-			<div class="content-ts">
-				<?php
-					/* Start the Loop */
-					while ( have_posts() ) : the_post();
-
-						get_template_part( 'template-parts/content-single' );
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-
-						the_post_navigation( array(
-							'next_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( 'Next <i class="far fa-long-arrow-alt-right"></i>', 'advance-pet-care' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Next post:', 'advance-pet-care' ) . '</span> ' ,
-							'prev_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( '<i class="far fa-long-arrow-alt-left"></i> Previous', 'advance-pet-care' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Previous post:', 'advance-pet-care' ) . '</span> ' ,
-						) );
-
-					endwhile; // End of the loop.
-				?>
-	       	</div>
-		<?php } else { ?>
-			<div class="row">
-		       	<div class="col-lg-8 col-md-8" class="content-ts">
-					<?php
-						/* Start the Loop */
-						while ( have_posts() ) : the_post();
-
-							get_template_part( 'template-parts/content-single' );
-
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-
-							the_post_navigation( array(
-								'next_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( 'Next <i class="far fa-long-arrow-alt-right"></i>', 'advance-pet-care' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Next post:', 'advance-pet-care' ) . '</span> ' ,
-								'prev_text' => '<span class="meta-nav text-uppercase p-2" aria-hidden="true">' . __( '<i class="far fa-long-arrow-alt-left"></i> Previous', 'advance-pet-care' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Previous post:', 'advance-pet-care' ) . '</span> ' ,
-							) );
-
-						endwhile; // End of the loop.
-					?>
-		       	</div>
-				<div id="sidebar" class="col-lg-4 col-md-4">
-					<?php dynamic_sidebar('sidebar-1'); ?>
-				</div>
-			</div>
-		<?php }?>
 	    <div class="clearfix"></div>
     </main>
 </div>

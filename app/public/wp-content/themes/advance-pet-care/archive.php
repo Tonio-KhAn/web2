@@ -6,6 +6,7 @@
  *
  * @package advance-pet-care
  */
+pageBanner();
 get_header(); ?>
 
 <main role="main" id="maincontent" class="our-services">
@@ -46,7 +47,7 @@ get_header(); ?>
                 </div>
             <?php }else if($advance_pet_care_left_right == 'Right Sidebar'){ ?>
                 <div class="row">
-                    <div id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 col-md-8'); ?>>
+                <div id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 col-md-8'); ?>>
                         <?php
                             the_archive_title( '<h1 class="page-title">', '</h1>' );
                             the_archive_description( '<div class="taxonomy-description">', '</div>' );

@@ -1,3 +1,4 @@
+
 jQuery(function($){
   "use strict";
   jQuery('.main-menu-navigation > ul').superfish({
@@ -98,12 +99,13 @@ function advance_pet_care_MobileMenuInit() {
   });
 }
 
-function advance_pet_care_search_focus() {
 
+
+function advance_pet_care_search_focus() {
   /* First and last elements in the menu */
   var advance_pet_care_search_firstTab = jQuery('.serach_inner input[type="search"]');
   var advance_pet_care_search_lastTab  = jQuery('button.search-close'); /* Cancel button will always be last */
-
+  var searchField = jQuery('#search-field').val();
   jQuery(".search-open").click(function(e){
     e.preventDefault();
     e.stopPropagation();
@@ -125,17 +127,23 @@ function advance_pet_care_search_focus() {
       e.preventDefault();
       advance_pet_care_search_firstTab.focus();
     }
+    
   });
+
+  
 
   /* Redirect first shift+tab to last input*/
   advance_pet_care_search_firstTab.on('keydown', function (e) {
+
     if (jQuery('body').hasClass('search-focus'))
     if ((e.which === 9 && e.shiftKey)) {
       e.preventDefault();
       advance_pet_care_search_lastTab.focus();
     }
+    this.typingTimer;
+    console.log(searchField)
   });
-
+ 
   /* Allow escape key to close menu */
   jQuery('.serach_inner').on('keyup', function(e){
     if (jQuery('body').hasClass('search-focus'))
